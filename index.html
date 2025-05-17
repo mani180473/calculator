@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Calculator</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .calculator-container {
+      max-width: 320px;
+      width: 100%;
+      padding: 20px;
+      border: 2px solid #333;
+      border-radius: 8px;
+      background: #492dd7;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      font-size: 1.2em;
+      margin: 8px 0;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-align: center;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculator-container">
+    <h2>Simple Calculator</h2>
+
+    <input id="num1" type="number" placeholder="Enter first number" />
+    <input id="num2" type="number" placeholder="Enter second number" />
+
+    <select id="operation">
+      <option value="add">+ Add</option>
+      <option value="subtract">- Subtract</option>
+      <option value="multiply">× Multiply</option>
+      <option value="divide">÷ Divide</option>
+    </select>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="calculator.js"></script>
+</body>
+</html>
